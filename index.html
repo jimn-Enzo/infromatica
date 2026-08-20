@@ -1,26 +1,507 @@
-<!DOCTYPE html>
-<html lang="en">
+DOCTYPE html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio</title>
+
+    <title>Mi Portfolio</title>
+
+    <style>
+
+        /* ===== CONFIGURACIÓN GENERAL ===== */
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+<!
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+
+        /* ===== ENCABEZADO ===== */
+
+        header {
+            background: linear-gradient(135deg, #182b4d, #315b91);
+            color: white;
+            text-align: center;
+            padding: 35px 20px;
+        }
+
+        header h1 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 17px;
+        }
+
+
+        /* ===== MENÚ ===== */
+
+        nav {
+            background-color: #243b5a;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px;
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        nav button:hover {
+            background-color: #4f7db7;
+        }
+
+
+        /* ===== CONTENIDO ===== */
+
+        main {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            gap: 25px;
+        }
+
+
+        /* ===== BARRA LATERAL ===== */
+
+        aside {
+            width: 250px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            height: fit-content;
+        }
+
+        aside h2 {
+            color: #243b5a;
+            margin-bottom: 15px;
+        }
+
+        aside button {
+            width: 100%;
+            margin: 7px 0;
+            padding: 12px;
+            border: none;
+            border-radius: 7px;
+            background-color: #e7eef7;
+            color: #243b5a;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        aside button:hover {
+            background-color: #4f7db7;
+            color: white;
+        }
+
+
+        /* ===== SECCIÓN PRINCIPAL ===== */
+
+        section {
+            flex: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+            min-height: 400px;
+        }
+
+        section h2 {
+            color: #243b5a;
+            margin-bottom: 15px;
+        }
+
+        section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+
+        /* ===== TARJETAS ===== */
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .tarjeta {
+            background-color: #eef4fb;
+            padding: 20px;
+            border-radius: 10px;
+            transition: 0.2s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .tarjeta h3 {
+            color: #315b91;
+            margin-bottom: 10px;
+        }
+
+
+        /* ===== BOTÓN ===== */
+
+        .boton {
+            background-color: #315b91;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .boton:hover {
+            background-color: #182b4d;
+        }
+
+
+        /* ===== PIE DE PÁGINA ===== */
+
+        footer {
+            margin-top: 40px;
+            background-color: #182b4d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+
+        /* ===== CELULAR ===== */
+
+        @media (max-width: 700px) {
+
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                width: 100%;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- ===== ENCABEZADO ===== -->
+
+    <header>
+
+        <h1>Mi Portfolio Digital</h1>
+
+        <p>Bienvenidos a mi página web</p>
+
+    </header>
+
+
+    <!-- ===== MENÚ ===== -->
+
+    <nav>
+
+        <button onclick="mostrarInicio()">Inicio</button>
+
+        <button onclick="mostrarSobreMi()">Sobre mí</button>
+
+        <button onclick="mostrarProyectos()">Proyectos</button>
+
+        <button onclick="mostrarContacto()">Contacto</button>
+
+    </nav>
+
+
+    <!-- ===== CONTENIDO ===== -->
+
+    <main>
+
+        <!-- BARRA LATERAL -->
+
+        <aside>
+
+            <h2>Ejercicios</h2>
+
+            <button onclick="mostrarEjercicio(1)">
+                Ejercicio 1
+            </button>
+
+            <button onclick="mostrarEjercicio(2)">
+                Ejercicio 2
+            </button>
+
+            <button onclick="mostrarEjercicio(3)">
+                Ejercicio 3
+            </button>
+
+            <button onclick="mostrarEjercicio(4)">
+                Ejercicio 4
+            </button>
+
+            <button onclick="mostrarEjercicio(5)">
+                Ejercicio 5
+            </button>
+
+            <button onclick="mostrarEjercicio(6)">
+                Ejercicio 6
+            </button>
+
+        </aside>
+
+
+        <!-- CONTENIDO QUE CAMBIA -->
+
+        <section id="contenido">
+
+            <h2>¡Bienvenidos!</h2>
+
+            <p>
+                Esta es mi página web personal.
+                Acá voy a mostrar mis ejercicios,
+                proyectos y trabajos.
+            </p>
+
+
+            <div class="tarjetas">
+
+                <div class="tarjeta">
+
+                    <h3> Informática</h3>
+
+                    <p>
+                        Trabajos y ejercicios realizados
+                        durante las clases.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3> Diseño</h3>
+
+                    <p>
+                        Proyectos creativos y diseños
+                        realizados por mí.
+                    </p>
+
+                </div>
+
+
+                <div class="tarjeta">
+
+                    <h3> Proyectos</h3>
+
+                    <p>
+                        Mis proyectos y trabajos
+                        personales.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ===== PIE ===== -->
+
+    <footer>
+
+        <p>Mi Portfolio Digital © 2026</p>
+
+    </footer>
+
+
+
+    <!-- ===== JAVASCRIPT ===== -->
+
+    <script>
+
+        const contenido = document.getElementById("contenido");
+
+
+        function mostrarInicio() {
+
+            contenido.innerHTML = `
+
+                <h2>¡Bienvenidos!</h2>
+
+                <p>
+                    Esta es mi página web personal.
+                    Desde el menú podés navegar por
+                    las diferentes secciones.
+                </p>
+
+                <div class="tarjetas">
+
+                    <div class="tarjeta">
+                        <h3>💻 Informática</h3>
+                        <p>Mis ejercicios de clase.</p>
+                    </div>
+
+                    <div class="tarjeta">
+                        <h3> Diseño</h3>
+                        <p>Mis trabajos creativos.</p>
+                    </div>
+
+                    <div class="tarjeta">
+                        <h3> Proyectos</h3>
+                        <p>Mis proyectos personales.</p>
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+
+        function mostrarSobreMi() {
+
+            contenido.innerHTML = `
+
+                <h2>Sobre mí</h2>
+
+                <p>
+                    ¡Hola! Soy estudiante y este es
+                    mi portfolio digital.
+                </p>
+
+                <p>
+                    En esta página voy a guardar mis
+                    trabajos y proyectos.
+                </p>
+
+            `;
+
+        }
+
+
+        function mostrarProyectos() {
+
+            contenido.innerHTML = `
+
+                <h2>Mis proyectos</h2>
+
+                <div class="tarjetas">
+
+                    <div class="tarjeta">
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción del proyecto.</p>
+                    </div>
+
+                    <div class="tarjeta">
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción del proyecto.</p>
+                    </div>
+
+                    <div class="tarjeta">
+                        <h3>Proyecto 3</h3>
+                        <p>Descripción del proyecto.</p>
+                    </div>
+
+                </div>
+
+            `;
+
+        }
+
+
+        function mostrarContacto() {
+
+            contenido.innerHTML = `
+
+                <h2>Contacto</h2>
+
+                <p>
+                    Podés colocar acá tus redes,
+                    correo u otra información.
+                </p>
+
+                <button class="boton" onclick="saludar()">
+                    Hacer clic
+                </button>
+
+            `;
+
+        }
+
+
+        function saludar() {
+
+            alert("¡Gracias por visitar mi portfolio! 😊");
+
+        }
+
+
+        function mostrarEjercicio(numero) {
+
+            contenido.innerHTML = `
+
+                <h2>Ejercicio ${numero}</h2>
+
+                <p>
+                    Acá podés colocar el contenido
+                    correspondiente al ejercicio ${numero}.
+                </p>
+
+                <button class="boton" onclick="mostrarInicio()">
+                    Volver al inicio
+                </button>
+
+            `;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+<head>
+
+    <style>
+
+        body {
+            background-color: #f0f4f8;
+        }
+
+    </style>
+
 </head>
 <body>
-    </h1>Portafolio de informatica</h1>
-    </P> pelusita67</P> 
-    <hr>
-    </h3>¿Quiénes somos?</h3>
-    </p> hola soy abril y soy una estudiante de secundaria c:</p>
-    </h3>ejercicios y desafios de clase</h3>
-    <ul>
-        <li><a href="./pages/listas.html">ejercicio1:</a></li>
-        <li>ejercicio2</li>
-        <li>ejercicio3</li>
-        <li>ejercicio4</li>
-        <li>ejercicio5</li>
-    </ul>
-    <img src="./tecnologias.png" alt="tecnologias usadas">   
-    
+    ...
 </body>
+
 </html>

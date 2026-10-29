@@ -7,18 +7,35 @@
     <title>Document</title>
 </head>
 <body>
-
-    <h1>acceso de sistema</h1>
-    <form id="acceso">
-    <div>
-     <label for ="usuario">Usuario:</label>
-      <input type ="text"id="usuario"> 
-    </div>
-    <div>
-    <label for ="contraseña">Contraseña</label>
-    <input type ="pasworld" id="contraseña">
-    </div>
-    </form>
-    <script src ="./javascript3.js"></script>
+    <h1>Estructuras de control en JS</h1>
+    <botton id="demo">ver demo</botton>
+    <p>id="<resultado1></resultado1></p>
+<p id="resultado2"></p>
+<ul>
+    <li>secuencial</li>
+    <li>condicional</li>
+    <ol>
+        <li>if:</li>
+        <li>if... else:</li>
+        <li>if... else/if... else</li>
+    </ol>
+</ul>
+<script>
+let boton= document.getElementById("demo");
+boton.addEventListener("click",function(){
+// 1. Entrada de datos
+let valor1 = prompt('Ingrese el primer número:');
+let valor2 = prompt('Ingrese el segundo número:');
+// 2. Selección de los elementos HTML
+let res1 = document.getElementById("resultado1");
+let res2 = document.getElementById("resultado2");
+// 3. Proceso (operaciones matemáticas)
+let suma = parseInt(valor1) + parseInt(valor2);
+let producto = parseInt(valor1) * parseInt(valor2);
+// 4. Salida
+res1.innerHTML = 'La suma es: ' + suma;
+res2.innerHTML = 'El producto es: ' + producto;
+});
+</script>
 </body>
 </html>
